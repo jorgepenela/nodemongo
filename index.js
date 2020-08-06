@@ -1,3 +1,3 @@
-const m1 = require('./modulo1');
+let m1 = require('./modulo1');
 
-m1.saludador.hola
+aviso.vender() // funciona pero devuelve un error

@@ -1,9 +1,16 @@
+const uuid = require('uuid')
+const faker = require('Faker')
+const moustache = require('moustache')
+
 // probando exportar funciones
-let saludador={
-	nombre: ['jorge','ceci','dami','agustin','milagros'],
-	hola : ()=>{
-		console.log('hola '+saludador.nombre)
+let aviso={
+	id : uuid.v4(),
+	producto: faker.commerce.productName(),
+	precio : faker.commerce.price(),	
+	vender : function(){		
+		console.log('vendo '+ aviso.producto +' a $'+aviso.precio);
 	}, 
 }
 
-module.exports = saludador;
+aviso.vender()
+module.exports = aviso;
